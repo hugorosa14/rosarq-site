@@ -1,15 +1,9 @@
 @import "tailwindcss";
 
+/* Base palette */
 :root {
-  --background: #ffffff;
+  --background: #fff7eb; /* light beige */
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +14,47 @@
 }
 
 body {
-  background: var(--background);
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Container spacing – mais afastado das bordas */
+.section-shell {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-shell {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section-shell {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* Hero – slow zoom animation */
+.hero-zoom {
+  animation: hero-zoom 28s ease-in-out infinite alternate;
+}
+
+@keyframes hero-zoom {
+  from {
+    transform: scale(1.04);
+  }
+  to {
+    transform: scale(1.1);
+  }
 }
