@@ -58,3 +58,8 @@ body {
     transform: scale(1.1);
   }
 }
+/* Fix for uppercase titles without changing visual size */
+.upperfix {
+  text-transform: uppercase;
+  letter-spacing: 0.03em; /* opcional, melhora a leitura */
+}

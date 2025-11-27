@@ -88,7 +88,7 @@ export default function Home() {
               </p>
 
               {/* Main heading */}
-              <h1 className="text-3xl font-semibold leading-tight text-slate-50 sm:text-4xl lg:text-[38px] lg:leading-snug">
+              <h1 className="upperfix text-3xl font-semibold leading-tight text-slate-50 sm:text-4xl lg:text-[38px] lg:leading-snug">
                 High-quality architectural 3D models, combining{" "}
                 <span className="font-semibold uppercase text-amber-300">
                   digital modeling
@@ -142,12 +142,11 @@ export default function Home() {
         className="section-shell py-16 text-slate-900 sm:py-20 lg:py-24"
       >
         <div className="max-w-3xl">
-          <h2 className="text-sm font-semibold tracking-[0.3em] text-amber-700 uppercase">
+          <h2 className="upperfix text-base md:text-lg font-semibold tracking-[0.3em] text-amber-700">
             Services
           </h2>
           <p className="mt-3 text-2xl font-semibold tracking-tight">
-            Two main pillars: architectural model making and selected building
-            services.
+            ARCHITECTURAL MODEL MAKING &amp; SERVICES.
           </p>
           <p className="mt-4 text-sm text-slate-700">
             ROSARQ combines precise physical models with on-site experience,
@@ -179,7 +178,7 @@ export default function Home() {
             className="rounded-3xl bg-white/80 p-6 shadow-sm shadow-slate-200"
           >
             <h3 className="text-lg font-semibold text-slate-900">
-              Small Renovation Services
+              Construction Services
             </h3>
             <p className="mt-3 text-sm text-slate-700">
               Small to medium-size projects with a focus on detail,
@@ -190,7 +189,7 @@ export default function Home() {
               <li>• Floor installation</li>
               <li>• Drywall and partition work</li>
               <li>
-                • Up to 10-year guarantee, applied according to ROSARQ
+                • 10-year guarantee, applied according to ROSARQ
                 installation conditions
               </li>
             </ul>
@@ -203,20 +202,26 @@ export default function Home() {
         id="models"
         className="section-shell pb-16 text-slate-900 sm:pb-20 lg:pb-24"
       >
-        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-          <div>
-            <h2 className="text-sm font-semibold tracking-[0.3em] text-amber-700 uppercase">
-              Model types
-            </h2>
-            <p className="mt-3 text-2xl font-semibold tracking-tight">
-              Models tailored to project type and level of detail.
-            </p>
-          </div>
-          <p className="max-w-md text-sm text-slate-700">
-            From conceptual white models to highly detailed presentations, we
-            combine digital modeling, 3D printing, CNC milling and handwork.
-          </p>
-        </div>
+        <div className="grid gap-4 md:grid-cols-[1fr,1fr]">
+  {/* LADO ESQUERDO: LABEL + TÍTULO */}
+  <div>
+    <h2 className="upperfix text-base md:text-lg font-semibold tracking-[0.3em] text-amber-700">
+      Model types
+    </h2>
+
+    <p className="upperfix mt-3 text-2xl font-semibold tracking-tight">
+      Models tailored to project type and level of detail.
+    </p>
+  </div>
+
+  {/* LADO DIREITO: TEXTO ALINHADO POR BAIXO DO TÍTULO */}
+  <div className="flex items-end">
+    <p className="max-w-md text-sm text-slate-700">
+      From conceptual models to highly detailed presentations, we combine
+      digital modeling, 3D printing, CNC milling and handcrafted techniques.
+    </p>
+  </div>
+</div>
 
         <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {[
@@ -247,33 +252,30 @@ export default function Home() {
       >
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <h2 className="text-sm font-semibold tracking-[0.3em] text-amber-700 uppercase">
+           <h2 className="upperfix text-base md:text-lg font-semibold tracking-[0.3em] text-amber-700">
               Selected projects
             </h2>
             <p className="mt-3 text-2xl font-semibold tracking-tight">
-              A closer look at recent models.
+              A CLOSER LOOK AT RECENT MODELS.
             </p>
           </div>
           <p className="max-w-md text-sm text-slate-700">
-            Two examples that show different scales and levels of detail:
-            residential models for local promotion and a conceptual model for a
-            project in Portugal.
+            
           </p>
         </div>
 
         <div className="mt-8 grid gap-6 md:grid-cols-2">
-          {/* HAMM */}
+          {/* HAMM – card inteiro clicável */}
           <Link
             href="/projects/hamm"
-            className="group overflow-hidden rounded-3xl bg-white/80 shadow-sm shadow-slate-200"
+            className="group block overflow-hidden rounded-3xl bg-white/80 shadow-sm shadow-slate-200"
           >
-            <div className="relative h-56 w-full overflow-hidden">
+            <div className="relative h-56 w-full">
               <Image
                 src="/projects/Hamm/hamm-1.png"
                 alt="Residential model – Hamm"
                 fill
-                className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                priority
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
               />
             </div>
             <div className="p-5">
@@ -284,23 +286,23 @@ export default function Home() {
                 Scale model for a residential development in Hamm, used for
                 sales meetings and communication with local partners.
               </p>
-              <p className="mt-3 text-sm font-medium text-amber-600">
+              <p className="mt-4 text-sm font-semibold text-amber-700">
                 View project →
               </p>
             </div>
           </Link>
 
-          {/* TONDELA */}
+          {/* TONDELA – card inteiro clicável */}
           <Link
             href="/projects/tondela"
-            className="group overflow-hidden rounded-3xl bg-white/80 shadow-sm shadow-slate-200"
+            className="group block overflow-hidden rounded-3xl bg-white/80 shadow-sm shadow-slate-200"
           >
-            <div className="relative h-56 w-full overflow-hidden">
+            <div className="relative h-56 w-full">
               <Image
-                src="/projects/Tondela/Tondela-1.png"
+                src="/projects/tondela/Tondela-1.png"
                 alt="Architectural model – Tondela"
                 fill
-                className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
               />
             </div>
             <div className="p-5">
@@ -311,7 +313,7 @@ export default function Home() {
                 Conceptual model combining clean volumes and landscape, ideal
                 for explaining the project to the client and municipality.
               </p>
-              <p className="mt-3 text-sm font-medium text-amber-600">
+              <p className="mt-4 text-sm font-semibold text-amber-700">
                 View project →
               </p>
             </div>
@@ -324,11 +326,11 @@ export default function Home() {
         id="process"
         className="section-shell pb-16 text-slate-900 sm:pb-20 lg:pb-24"
       >
-        <h2 className="text-sm font-semibold tracking-[0.3em] text-amber-700 uppercase">
+        <h2 className="upperfix text-base md:text-lg font-semibold tracking-[0.3em] text-amber-700">
           Process
         </h2>
         <p className="mt-3 text-2xl font-semibold tracking-tight">
-          A clear process from first files to final delivery.
+          A CLEAR PROCESS FROM FIRST FILES TO FINAL DELIVERY.
         </p>
 
         <div className="mt-8 grid gap-6 md:grid-cols-3">
@@ -337,7 +339,7 @@ export default function Home() {
               1 · Brief &amp; files
             </p>
             <p className="mt-3 text-sm text-slate-700">
-              We receive plans, sections, 3D models and references, and define
+              We receive plans format Dwg/Pdf , sections, 3D models and references, and define
               scale, purpose and deadline for the model.
             </p>
           </div>
@@ -363,49 +365,48 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ABOUT */}
+      {/* ABOUT / FOUNDER */}
       <section
-  id="about"
-  className="section-shell pb-20 text-slate-900 sm:pb-24 lg:pb-32"
->
-  <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+        id="about"
+        className="section-shell pb-16 text-slate-900 sm:pb-20 lg:pb-24"
+      >
+        <div className="grid gap-10 md:grid-cols-2 lg:items-center">
+          {/* TEXTO À ESQUERDA */}
+          <div>
+            <h2 className="upperfix text-base md:text-lg font-semibold tracking-[0.3em] text-amber-700">
+              FOUNDER &amp; MODEL MAKER
+            </h2>
+            <p className="mt-1 text-xs font-semibold tracking-[0.35em] text-slate-500 uppercase">
+              
+            </p>
 
-    {/* LEFT — TEXT */}
-    <div>
-      <h2 className="text-sm font-semibold tracking-[0.3em] text-amber-700 uppercase">
-        FOUNDER & MODEL MAKER
-      </h2>
+            <p className="mt-4 text-sm text-slate-700">
+              ROSARQ is led by a model maker who has always enjoyed turning
+              drawings into something you can hold in your hands. After years
+              working between architecture, construction sites and workshops,
+              physical models became the natural way to connect those worlds.
+            </p>
 
-      <p className="mt-2 text-xs tracking-[0.35em] text-slate-600 uppercase">
-        
-      </p>
+            <p className="mt-3 text-sm text-slate-700">
+              As a kid, weekends were spent building small houses from
+              cardboard and wooden sticks — one of them was a tiny house made
+              only with wood sticks. That same curiosity and attention to detail is
+              what now goes into every scale model produced at ROSARQ.
+            </p>
+          </div>
 
-      <p className="mt-6 text-sm text-slate-700 leading-relaxed">
-        ROSARQ is led by a model maker who has always enjoyed turning drawings
-        into something you can hold in your hands. After years working between
-        architecture, construction sites and workshops, physical models became
-        the natural way to connect those worlds.
-      </p>
-
-      <p className="mt-4 text-sm text-slate-700 leading-relaxed">
-        As a kid, weekends were spent building small houses from cardboard and
-        wooden sticks — one of them was a tiny house made only with palitos.
-        That same curiosity and attention to detail is what now goes into every
-        scale model produced at ROSARQ.
-      </p>
-    </div>
-
-    {/* RIGHT — PHOTO */}
-    <div className="relative h-[480px] w-full overflow-hidden rounded-3xl shadow-md">
-      <Image
-        src="/founder.jpg"       // <- coloca aqui o nome da tua foto
-        alt="Founder of ROSARQ"
-        fill
-        className="object-cover"
-      />
-    </div>
-  </div>
-</section>
+          {/* FOTO À DIREITA */}
+          <div className="relative h-[420px] w-full overflow-hidden rounded-3xl bg-slate-900/5 shadow-md">
+            <Image
+  src="/founder.jpg"
+  alt="Founder of ROSARQ"
+  fill
+  className="object-cover object-top rounded-3xl"
+  priority
+/>
+          </div>
+        </div>
+      </section>
 
       {/* CONTACT */}
       <section
@@ -414,16 +415,16 @@ export default function Home() {
       >
         <div className="grid gap-8 lg:grid-cols-[1.2fr,0.8fr] lg:items-start">
           <div>
-            <h2 className="text-sm font-semibold tracking-[0.3em] text-amber-700 uppercase">
+            <h2 className="upperfix text-base md:text-lg font-semibold tracking-[0.3em] text-amber-700">
               Contact
             </h2>
             <p className="mt-3 text-2xl font-semibold tracking-tight">
-              Share your project and we&apos;ll see what fits.
+              SHARE YOUR PROJECT AND WE&apos;LL SEE WHAT FITS.
             </p>
             <p className="mt-4 text-sm text-slate-700">
-              Send plans, sections, 3D model or reference links. We can start
-              with a quick estimate for scale, level of detail and delivery
-              time.
+              Send us the final design, drawing of the buildings in PDF or CAD, 
+              sections or sketches. We can start with a quick estimate for scale,
+              level of detail and delivery time.
             </p>
           </div>
 
