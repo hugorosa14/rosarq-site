@@ -1,6 +1,7 @@
+// app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "./Header"; // ← IMPORTA O HEADER
+import Header from "./Header";
 
 export const metadata: Metadata = {
   title: "ROSARQ | Architectural Model Making & Services",
@@ -15,8 +16,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <Header />  {/* ← AGORA O HEADER ESTÁ AQUI */}
+      <body className="bg-[var(--background)] text-slate-900">
+        <Header /> {/* HEADER NO TOPO */}
         <main className="pt-4">{children}</main>
       </body>
     </html>
