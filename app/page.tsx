@@ -171,7 +171,7 @@ export default function Home() {
           >
             <div className="relative h-56 w-full">
               <Image
-                src="/projects/waterproofing/waterproofing-1.jpg"
+                src="/projects/waterproofing/waterproofing-2.jpg"
                 alt="Waterproofing renovation project"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-[1.05]"
