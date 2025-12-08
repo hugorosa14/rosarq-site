@@ -31,7 +31,7 @@ export default function Home() {
           </div>
 
           {/* Top navigation */}
-          <nav className="hidden items-center gap-8 text-sm font-medium text-slate-800 md:flex">
+          <nav className="flex items-center gap-6 text-sm font-medium text-slate-800">
             <a href="#services" className="hover:text-slate-950">
               Services
             </a>
@@ -39,7 +39,7 @@ export default function Home() {
               Model types
             </a>
             <a href="#physical" className="hover:text-slate-950">
-              Physical works
+              Services
             </a>
             <a href="#projects" className="hover:text-slate-950">
               Projects
@@ -119,14 +119,14 @@ export default function Home() {
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <a
                   href="#contact"
-                  className="rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-amber-500/30 transition hover:bg-amber-400"
+                  className="rounded-full bg-amber-500 px-4 py-2 sm:px-6 sm:py-3 text-sm font-semibold text-slate-950"
                 >
                   Request a quote
                 </a>
 
                 <a
                   href="#services"
-                  className="rounded-full border border-slate-100/70 bg-white/5 px-6 py-3 text-sm font-semibold text-slate-50 backdrop-blur transition hover:bg-white/10"
+                  className="rounded-full border border-slate-100/70 bg-white/5 px-4 py-2 sm:px-6 sm:py-3 text-sm font-semibold text-slate-900"
                 >
                   View services
                 </a>
