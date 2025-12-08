@@ -8,37 +8,6 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#f9f4ef] text-slate-900">
-      {/* ================= HEADER ================= */}
-      <header className="sticky top-0 z-30 border-b border-black/10 bg-[#f9f4ef]/95 backdrop-blur">
-        <div className="section-shell mx-auto flex h-20 items-center justify-between px-4 max-w-7xl">
-          
-          {/* LOGO + NAME */}
-          <div className="flex items-center gap-4">
-            <Image
-              src="/logo-rosarq.png"
-              alt="ROSARQ"
-              width={64}
-              height={64}
-              className="h-14 w-14 rounded-full shadow-sm"
-              priority
-            />
-            <p className="text-xl font-semibold tracking-[0.25em] uppercase text-slate-900">
-              ROSARQ
-            </p>
-          </div>
-
-          {/* DESKTOP MENU */}
-          <nav className="hidden md:flex items-center gap-8 text-[15px] font-medium text-slate-800">
-            <a href="#services" className="hover:text-slate-950 transition">Services</a>
-            <a href="#models" className="hover:text-slate-950 transition">Model types</a>
-            <a href="#projects" className="hover:text-slate-950 transition">Projects</a>
-            <a href="#process" className="hover:text-slate-950 transition">Process</a>
-            <a href="#about" className="hover:text-slate-950 transition">About</a>
-            <a href="#contact" className="hover:text-slate-950 transition">Contact</a>
-          </nav>
-
-        </div>
-      </header>
 
       {/* ================= HERO ================= */}
       <section className="relative overflow-hidden">
@@ -51,7 +20,7 @@ export default function Home() {
             className="object-cover object-center scale-105"
           />
 
-          {/* GRADIENT FOR READABILITY */}
+          {/* GRADIENT */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/20" />
 
           {/* HERO CONTENT */}
@@ -66,14 +35,12 @@ export default function Home() {
                 <span className="text-amber-300">digital modeling</span>,{" "}
                 <span className="text-amber-300">CNC milling</span>,{" "}
                 <span className="text-amber-300">3D printing</span> and{" "}
-                <span className="text-amber-300">handcrafted techniques</span>{" "}
-                for precise and realistic representations.
+                <span className="text-amber-300">handcrafted techniques</span>.
               </h1>
 
               <p className="mt-6 max-w-lg text-slate-100/90 text-sm sm:text-base">
                 Serving architects, real estate developers, construction
-                companies and interior designers with tailor-made models for
-                presentations, marketing and planning.
+                companies and interior designers with tailor-made models.
               </p>
 
               {/* HERO BUTTONS */}
@@ -92,14 +59,13 @@ export default function Home() {
                   View services
                 </a>
               </div>
-
             </div>
           </div>
         </div>
       </section>
 
       {/* ================= SERVICES ================= */}
-      <section id="services" className="section-shell max-w-6xl mx-auto px-6 py-20 text-slate-900">
+      <section id="services" className="section-shell max-w-6xl mx-auto px-6 py-20">
         <h2 className="text-base md:text-lg font-semibold tracking-[0.25em] text-amber-700 uppercase">
           Services
         </h2>
@@ -112,24 +78,23 @@ export default function Home() {
           <div className="rounded-3xl bg-white p-6 shadow-md">
             <h3 className="text-lg font-semibold">Architectural model making</h3>
             <p className="mt-3 text-sm">
-              High-quality physical models for competitions, presentations and
-              marketing.
+              High-quality physical models for competitions, presentations and marketing.
             </p>
             <ul className="mt-4 space-y-2 text-sm">
               <li>• Study and concept models</li>
-              <li>• Presentation models for clients</li>
-              <li>• Marketing models for sales stands</li>
+              <li>• Presentation models</li>
+              <li>• Marketing models</li>
             </ul>
           </div>
 
-          {/* PHYSICAL SERVICES */}
+          {/* CONSTRUCTION SERVICES */}
           <div className="rounded-3xl bg-white p-6 shadow-md">
             <h3 className="text-lg font-semibold">Construction Services</h3>
             <p className="mt-3 text-sm">
-              Small to medium construction work focused on fine detail.
+              Renovation, waterproofing and precision construction services.
             </p>
             <ul className="mt-4 space-y-2 text-sm">
-              <li>• Waterproofing works</li>
+              <li>• Waterproofing works (étanchéité)</li>
               <li>• Floor installation</li>
               <li>• Drywall and partitions</li>
               <li>• 10-year guarantee</li>
@@ -138,49 +103,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= MODEL TYPES ================= */}
-      <section id="models" className="section-shell max-w-6xl mx-auto px-6 py-20">
-        <div className="grid gap-4 md:grid-cols-[1fr,1fr] items-end">
-          
-          <div>
-            <h2 className="text-base md:text-lg font-semibold tracking-[0.25em] text-amber-700 uppercase">
-              Model types
-            </h2>
-            <p className="mt-3 text-3xl font-semibold tracking-tight">
-              Tailored models for every project.
-            </p>
-          </div>
-
-          <p className="text-sm text-slate-700 max-w-md">
-            From conceptual to fully detailed presentation models, combining 
-            digital fabrication and handcrafted techniques.
-          </p>
-        </div>
-
-        <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {[
-            "Master planning models",
-            "Mixed-use models",
-            "Residential building models",
-            "Villa models",
-            "Interior models",
-            "Landscape models",
-            "Conceptual white models",
-            "3D printed models",
-            "Handcrafted architectural models",
-          ].map((label) => (
-            <div
-              key={label}
-              className="rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm font-medium shadow-sm"
-            >
-              {label}
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* ================= PROJECTS ================= */}
       <section id="projects" className="section-shell max-w-6xl mx-auto px-6 py-20">
+
         <h2 className="text-base md:text-lg font-semibold tracking-[0.25em] text-amber-700 uppercase">
           Selected projects
         </h2>
@@ -189,7 +114,7 @@ export default function Home() {
           A closer look at recent work.
         </p>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
 
           {/* HAMM */}
           <Link
@@ -199,7 +124,7 @@ export default function Home() {
             <div className="relative h-56 w-full">
               <Image
                 src="/projects/Hamm/hamm-1.png"
-                alt="Model — Hamm"
+                alt="Hamm model"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-[1.05]"
               />
@@ -207,7 +132,7 @@ export default function Home() {
             <div className="p-5">
               <h3 className="text-lg font-semibold">Residential model — Hamm</h3>
               <p className="mt-2 text-sm text-slate-700">
-                A clean architectural representation used for meetings and communication.
+                Scale model for a residential development.
               </p>
               <p className="mt-4 text-sm font-semibold text-amber-700">
                 View project →
@@ -223,7 +148,7 @@ export default function Home() {
             <div className="relative h-56 w-full">
               <Image
                 src="/projects/tondela/Tondela-1.png"
-                alt="Model — Tondela"
+                alt="Tondela model"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-[1.05]"
               />
@@ -231,7 +156,31 @@ export default function Home() {
             <div className="p-5">
               <h3 className="text-lg font-semibold">Architectural model — Tondela</h3>
               <p className="mt-2 text-sm text-slate-700">
-                A clean volumetric model used to present the project to municipality & clients.
+                Conceptual model combining clean volumes and site.
+              </p>
+              <p className="mt-4 text-sm font-semibold text-amber-700">
+                View project →
+              </p>
+            </div>
+          </Link>
+
+          {/* 🔥 NEW — WATERPROOFING PROJECT */}
+          <Link
+            href="/projects/waterproofing"
+            className="group block overflow-hidden rounded-3xl bg-white shadow-md"
+          >
+            <div className="relative h-56 w-full">
+              <Image
+                src="/projects/waterproofing/waterproofing-1.jpg"
+                alt="Waterproofing renovation project"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+              />
+            </div>
+            <div className="p-5">
+              <h3 className="text-lg font-semibold">Renovation & Waterproofing Works</h3>
+              <p className="mt-2 text-sm text-slate-700">
+                Professional waterproofing, flooring and renovation services.
               </p>
               <p className="mt-4 text-sm font-semibold text-amber-700">
                 View project →
@@ -240,6 +189,7 @@ export default function Home() {
           </Link>
 
         </div>
+
       </section>
 
       {/* ================= PROCESS ================= */}
@@ -255,21 +205,18 @@ export default function Home() {
           {[
             {
               step: "1 · Brief & files",
-              text: "We receive plans, sections, 3D models and references. Scale, purpose and timeline are defined.",
+              text: "We receive plans, sections, 3D models and references.",
             },
             {
               step: "2 · Proposal & production",
-              text: "Proposal includes materials, scale and pricing. Production combines CNC, 3D printing and handcraft.",
+              text: "We prepare a proposal with scale, materials and timing.",
             },
             {
               step: "3 · Delivery",
-              text: "Delivery in Luxembourg with careful packaging and optional showroom installation.",
+              text: "Models delivered with professional packaging and installation.",
             },
           ].map((item) => (
-            <div
-              key={item.step}
-              className="rounded-3xl bg-white p-5 shadow-md"
-            >
+            <div key={item.step} className="rounded-3xl bg-white p-5 shadow-md">
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-amber-600">
                 {item.step}
               </p>
@@ -288,14 +235,11 @@ export default function Home() {
             </h2>
 
             <p className="mt-4 text-sm text-slate-700">
-              ROSARQ is led by a model maker who turned a passion for creating
-              physical objects into a professional craft. Years of experience in
-              architecture, construction and workshops come together in each model.
+              ROSARQ is led by a model maker passionate about turning drawings into physical objects.
             </p>
 
             <p className="mt-3 text-sm text-slate-700">
-              Early inspirations came from building cardboard houses and wooden
-              miniatures — skills that now translate into precision architectural models.
+              Early work began with cardboard houses and wooden miniatures — today transformed into architectural precision.
             </p>
           </div>
 
@@ -323,13 +267,13 @@ export default function Home() {
             </p>
 
             <p className="mt-4 text-sm text-slate-700">
-              Send us drawings (PDF/CAD), 3D models or sketches. We’ll advise on
-              scale, detail level and delivery time.
+              Send drawings (PDF/CAD), 3D models or sketches. We'll suggest the best scale and level of detail.
             </p>
           </div>
 
           <div className="rounded-3xl bg-white p-6 shadow-md">
             <p className="text-sm font-semibold text-slate-900">Direct contact</p>
+
             <div className="mt-3 space-y-2 text-sm text-slate-700">
               <p>
                 Email:{" "}
@@ -339,8 +283,9 @@ export default function Home() {
               </p>
               <p>Based in Luxembourg</p>
             </div>
+
             <p className="mt-4 text-xs text-slate-500">
-              A full contact form may be added later. Direct email keeps things simple.
+              A full contact form may be added later.
             </p>
           </div>
         </div>
@@ -355,6 +300,7 @@ export default function Home() {
           <p>Website built with Next.js & Vercel</p>
         </div>
       </footer>
+
     </main>
   );
 }
