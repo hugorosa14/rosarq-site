@@ -63,12 +63,8 @@ export default function Header() {
 
       {/* MOBILE SLIDE MENU */}
      <div
-  className={`
-    md:hidden fixed inset-0 z-[999] 
-    bg-[#f9f4ef]/95 backdrop-blur-md 
-    p-6 transition-transform duration-300 
-    ${isOpen ? "translate-x-0" : "-translate-x-full"}
-  `}
+  className={`md:hidden fixed inset-0 left-0 top-0 w-3/4 h-full bg-[#f9f4ef]/95 backdrop-blur-sm z-[9999]
+${isOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-300`}
 >
   <nav className="flex flex-col gap-6 text-lg font-medium text-slate-900 mt-10">
     <a href="#services" onClick={closeMenu}>Services</a>
