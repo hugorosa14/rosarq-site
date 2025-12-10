@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 w-full bg-[#f9f4ef]/95 backdrop-blur border-b border-black/10">
       <div className="mx-auto max-w-7xl px-4 h-20 flex items-center justify-between">
-        
+
         {/* LOGO */}
         <div className="flex items-center gap-4">
           <Image
@@ -47,24 +47,23 @@ export default function Header() {
           <span className={`h-[3px] w-6 bg-slate-900 rounded transition-all ${isOpen ? "opacity-0" : ""}`} />
           <span className={`h-[3px] w-6 bg-slate-900 rounded transition-all ${isOpen ? "-rotate-45 -translate-y-[7px]" : ""}`} />
         </button>
-
       </div>
 
-      {/* MOBILE MENU FULL SCREEN */}
-      <div
-        className={`fixed inset-0 bg-[#f9f4ef]/98 backdrop-blur-md z-[9999] transform ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        } transition-transform duration-300 md:hidden`}
-      >
-        {/* CLOSE BUTTON INSIDE MENU */}
-        <button
-          className="absolute top-6 right-6 text-3xl text-slate-900"
+      {/* BACKDROP */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black/40 z-[90] md:hidden"
           onClick={closeMenu}
-        >
-          ✕
-        </button>
+        />
+      )}
 
-        <nav className="flex flex-col gap-8 text-2xl font-medium text-slate-900 mt-28 px-8">
+      {/* MOBILE SLIDE PANEL */}
+      <div
+        className={`fixed top-0 right-0 h-full w-3/4 bg-[#f9f4ef] backdrop-blur-md shadow-xl z-[100]
+        transform ${isOpen ? "translate-x-0" : "translate-x-full"} 
+        transition-transform duration-300 md:hidden`}
+      >
+        <nav className="flex flex-col gap-6 text-lg font-medium text-slate-900 mt-24 px-8">
           <a href="#services" onClick={closeMenu}>Services</a>
           <a href="#models" onClick={closeMenu}>Model types</a>
           <a href="#projects" onClick={closeMenu}>Projects</a>
@@ -73,14 +72,6 @@ export default function Header() {
           <a href="#contact" onClick={closeMenu}>Contact</a>
         </nav>
       </div>
-
-      {/* DARK BACKDROP */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black/40 z-[9998] md:hidden"
-          onClick={closeMenu}
-        />
-      )}
     </header>
   );
 }

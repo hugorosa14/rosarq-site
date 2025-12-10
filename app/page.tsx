@@ -102,7 +102,40 @@ export default function Home() {
           </div>
         </div>
       </section>
+    {/* ================= MODEL TYPES ================= */}
+<section id="models" className="section-shell max-w-6xl mx-auto px-6 py-20">
+  <h2 className="text-base md:text-lg font-semibold tracking-[0.25em] text-amber-700 uppercase">
+    Model Types
+  </h2>
 
+  <p className="mt-3 text-3xl font-semibold tracking-tight">
+    Models tailored to project type and level of detail.
+  </p>
+
+  <p className="mt-4 text-sm text-slate-700 max-w-3xl">
+    From conceptual models to highly detailed presentations, we combine 
+    digital modeling, 3D printing, CNC milling and handcrafted techniques.
+  </p>
+
+  {/* UNIFIED CARD */}
+  <div className="mt-10 rounded-3xl bg-white p-8 shadow-md">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-800">
+
+      <p>• Master planning models</p>
+      <p>• Mixed-use models</p>
+
+      <p>• Villa models</p>
+      <p>• Interior models</p>
+
+      <p>• Conceptual white models</p>
+      <p>• 3D printed architectural models</p>
+
+      <p>• Landscape models</p>
+      <p>• Handcrafted architectural models</p>
+
+    </div>
+  </div>
+</section>
       {/* ================= PROJECTS ================= */}
       <section id="projects" className="section-shell max-w-6xl mx-auto px-6 py-20">
 
