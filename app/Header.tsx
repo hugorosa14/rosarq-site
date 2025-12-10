@@ -12,7 +12,6 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 w-full bg-[#f9f4ef]/95 backdrop-blur border-b border-black/10">
       <div className="mx-auto max-w-7xl px-4 h-20 flex items-center justify-between">
-        
         {/* LOGO + NAME */}
         <div className="flex items-center gap-4">
           <Image
@@ -39,7 +38,7 @@ export default function Header() {
 
         {/* MOBILE MENU BUTTON */}
         <button
-          className="md:hidden flex flex-col gap-[6px] z-[10000]"
+          className="md:hidden flex flex-col gap-[6px] z-50"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -61,31 +60,26 @@ export default function Header() {
         </button>
       </div>
 
-      {/* MOBILE SLIDE MENU */}
+      {/* MOBILE SLIDE MENU (full width, debaixo do header) */}
       <div
         className={`
-          md:hidden fixed top-0 right-0 h-full w-[80%]
-          bg-[#f9f4ef]/95 backdrop-blur-md shadow-xl
-          z-[9999] p-8 flex flex-col gap-6 text-lg font-medium text-slate-900
+          md:hidden fixed inset-x-0 top-20 bottom-0
+          bg-[#f9f4ef]/95 backdrop-blur-md
+          z-40
+          px-6 py-8
           transition-transform duration-300
-          ${isOpen ? "translate-x-0" : "translate-x-full"}
+          ${isOpen ? "translate-y-0" : "-translate-y-full"}
         `}
       >
-        <a href="#services" onClick={closeMenu}>Services</a>
-        <a href="#models" onClick={closeMenu}>Model types</a>
-        <a href="#projects" onClick={closeMenu}>Projects</a>
-        <a href="#process" onClick={closeMenu}>Process</a>
-        <a href="#about" onClick={closeMenu}>About</a>
-        <a href="#contact" onClick={closeMenu}>Contact</a>
+        <nav className="flex flex-col gap-6 text-lg font-medium text-slate-900">
+          <a href="#services" onClick={closeMenu}>Services</a>
+          <a href="#models" onClick={closeMenu}>Model types</a>
+          <a href="#projects" onClick={closeMenu}>Projects</a>
+          <a href="#process" onClick={closeMenu}>Process</a>
+          <a href="#about" onClick={closeMenu}>About</a>
+          <a href="#contact" onClick={closeMenu}>Contact</a>
+        </nav>
       </div>
-
-      {/* DARK BACKDROP WHEN MENU IS OPEN */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black/40 z-[9000] md:hidden"
-          onClick={closeMenu}
-        />
-      )}
     </header>
   );
 }
