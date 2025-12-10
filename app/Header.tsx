@@ -63,27 +63,28 @@ export default function Header() {
 
       {/* MOBILE SLIDE MENU */}
       <div
-        className={`md:hidden fixed top-0 left-0 w-3/4 h-full bg-[#f9f4ef] shadow-xl z-40 p-8 transform transition-transform duration-300 ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
-      >
-        <nav className="flex flex-col gap-6 text-lg font-medium text-slate-900 mt-10">
-          <a href="#services" onClick={closeMenu}>Services</a>
-          <a href="#models" onClick={closeMenu}>Model types</a>
-          <a href="#projects" onClick={closeMenu}>Projects</a>
-          <a href="#process" onClick={closeMenu}>Process</a>
-          <a href="#about" onClick={closeMenu}>About</a>
-          <a href="#contact" onClick={closeMenu}>Contact</a>
-        </nav>
-      </div>
+  className={`md:hidden fixed top-0 left-0 w-3/4 h-full 
+  bg-[#f9f4ef]/95 shadow-xl z-40 
+  transform transition-transform duration-300
+  ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
+>
+  <nav className="flex flex-col gap-6 text-lg font-medium text-slate-900 mt-10 p-6">
+    <a href="#services" onClick={closeMenu}>Services</a>
+    <a href="#models" onClick={closeMenu}>Model types</a>
+    <a href="#projects" onClick={closeMenu}>Projects</a>
+    <a href="#process" onClick={closeMenu}>Process</a>
+    <a href="#about" onClick={closeMenu}>About</a>
+    <a href="#contact" onClick={closeMenu}>Contact</a>
+  </nav>
+</div>
 
       {/* DARK BACKDROP WHEN MENU IS OPEN */}
       {isOpen && (
-        <div
-          onClick={closeMenu}
-          className="fixed inset-0 bg-black/40 backdrop-blur-sm z-30 md:hidden"
-        />
-      )}
+  <div
+    className="fixed inset-0 bg-black/40 z-30 md:hidden"
+    onClick={closeMenu}
+  />
+)}
     </header>
   );
 }
