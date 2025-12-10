@@ -63,8 +63,8 @@ export default function Header() {
 
       {/* MOBILE SLIDE MENU */}
       <div
-  className={`md:hidden fixed top-0 left-0 w-3/4 h-full overflow-y-auto
-    bg-[#f9f4ef] backdrop-blur-lg shadow-xl z-40 p-6
+  className={`md:hidden fixed top-[80px] left-0 w-3/4 h-[calc(100%-80px)]
+    overflow-y-auto bg-[#f9f4ef]/80 backdrop-blur-lg shadow-xl z-40 p-6
     ${isOpen ? "translate-x-0" : "-translate-x-full"}
   `}
 >
