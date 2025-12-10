@@ -3,9 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const waterproofingImages = [
-  "/projects/waterproofing/waterproofing-1.JPG",
-  "/projects/waterproofing/waterproofing-2.JPG",
-  "/projects/waterproofing/waterproofing-3.JPG",
+  "/projects/waterproofing/waterproofing-1.jpg",
+  "/projects/waterproofing/waterproofing-2.jpg",
+  "/projects/waterproofing/waterproofing-3.jpg",
 ];
 
 export default function WaterproofingProjectPage() {
