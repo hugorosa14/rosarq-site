@@ -64,7 +64,7 @@ export default function Header() {
       {/* MOBILE SLIDE MENU */}
       <div
   className={`md:hidden fixed top-0 left-0 w-3/4 h-full 
-  bg-[#f9f4ef]/80 shadow-xl z-40 
+  bg-[#f9f4ef] shadow-xl z-40 
   transform transition-transform duration-300
   ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
 >
