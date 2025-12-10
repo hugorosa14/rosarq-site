@@ -12,7 +12,8 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 w-full bg-[#f9f4ef]/95 backdrop-blur border-b border-black/10">
       <div className="mx-auto max-w-7xl px-4 h-20 flex items-center justify-between">
-        {/* LOGO + NAME */}
+        
+        {/* LOGO */}
         <div className="flex items-center gap-4">
           <Image
             src="/logo-rosarq.png"
@@ -28,12 +29,12 @@ export default function Header() {
 
         {/* DESKTOP MENU */}
         <nav className="hidden md:flex items-center gap-8 text-[15px] font-medium text-slate-800">
-          <a href="#services" className="hover:text-slate-950 transition">Services</a>
-          <a href="#models" className="hover:text-slate-950 transition">Model types</a>
-          <a href="#projects" className="hover:text-slate-950 transition">Projects</a>
-          <a href="#process" className="hover:text-slate-950 transition">Process</a>
-          <a href="#about" className="hover:text-slate-950 transition">About</a>
-          <a href="#contact" className="hover:text-slate-950 transition">Contact</a>
+          <a href="#services">Services</a>
+          <a href="#models">Model types</a>
+          <a href="#projects">Projects</a>
+          <a href="#process">Process</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
         </nav>
 
         {/* MOBILE MENU BUTTON */}
@@ -42,36 +43,28 @@ export default function Header() {
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
-          <span
-            className={`h-[3px] w-6 bg-slate-900 rounded transition-all ${
-              isOpen ? "rotate-45 translate-y-[6px]" : ""
-            }`}
-          />
-          <span
-            className={`h-[3px] w-6 bg-slate-900 rounded transition-all ${
-              isOpen ? "opacity-0" : ""
-            }`}
-          />
-          <span
-            className={`h-[3px] w-6 bg-slate-900 rounded transition-all ${
-              isOpen ? "-rotate-45 -translate-y-[6px]" : ""
-            }`}
-          />
+          <span className={`h-[3px] w-6 bg-slate-900 rounded transition-all ${isOpen ? "rotate-45 translate-y-[7px]" : ""}`} />
+          <span className={`h-[3px] w-6 bg-slate-900 rounded transition-all ${isOpen ? "opacity-0" : ""}`} />
+          <span className={`h-[3px] w-6 bg-slate-900 rounded transition-all ${isOpen ? "-rotate-45 -translate-y-[7px]" : ""}`} />
         </button>
+
       </div>
 
-      {/* MOBILE SLIDE MENU (full width, debaixo do header) */}
+      {/* MOBILE MENU FULL SCREEN */}
       <div
-        className={`
-          md:hidden fixed inset-x-0 top-20 bottom-0
-          bg-[#f9f4ef]/95 backdrop-blur-md
-          z-40
-          px-6 py-8
-          transition-transform duration-300
-          ${isOpen ? "translate-y-0" : "-translate-y-full"}
-        `}
+        className={`fixed inset-0 bg-[#f9f4ef]/98 backdrop-blur-md z-[9999] transform ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        } transition-transform duration-300 md:hidden`}
       >
-        <nav className="flex flex-col gap-6 text-lg font-medium text-slate-900">
+        {/* CLOSE BUTTON INSIDE MENU */}
+        <button
+          className="absolute top-6 right-6 text-3xl text-slate-900"
+          onClick={closeMenu}
+        >
+          ✕
+        </button>
+
+        <nav className="flex flex-col gap-8 text-2xl font-medium text-slate-900 mt-28 px-8">
           <a href="#services" onClick={closeMenu}>Services</a>
           <a href="#models" onClick={closeMenu}>Model types</a>
           <a href="#projects" onClick={closeMenu}>Projects</a>
@@ -80,6 +73,14 @@ export default function Header() {
           <a href="#contact" onClick={closeMenu}>Contact</a>
         </nav>
       </div>
+
+      {/* DARK BACKDROP */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black/40 z-[9998] md:hidden"
+          onClick={closeMenu}
+        />
+      )}
     </header>
   );
 }
