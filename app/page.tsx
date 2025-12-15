@@ -20,30 +20,22 @@ export default function Home() {
             className="object-cover object-center scale-105"
           />
 
-          {/* GRADIENT */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/20" />
 
-          {/* HERO CONTENT */}
           <div className="relative flex h-full items-center px-6 sm:px-10 max-w-5xl">
             <div>
               <p className="text-xs font-semibold tracking-[0.35em] text-amber-300 uppercase mb-4">
-                ARCHITECTURAL MODEL MAKING & SERVICES
+                Architectural model making & services
               </p>
 
               <h1 className="text-3xl sm:text-4xl lg:text-[42px] leading-tight font-semibold text-white">
-                High-quality architectural 3D models combining{" "}
-                <span className="text-amber-300">digital modeling</span>,{" "}
-                <span className="text-amber-300">CNC milling</span>,{" "}
-                <span className="text-amber-300">3D printing</span> and{" "}
-                <span className="text-amber-300">handcrafted techniques</span>.
+                Architectural model making for clear and confident decisions.
               </h1>
 
               <p className="mt-6 max-w-lg text-slate-100/90 text-sm sm:text-base">
-                Serving architects, real estate developers, construction
-                companies and interior designers with tailor-made models.
+                High-quality physical models for competitions, presentations and client communication.
               </p>
 
-              {/* HERO BUTTONS */}
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
                   href="#contact"
@@ -65,20 +57,21 @@ export default function Home() {
       </section>
 
       {/* ================= SERVICES ================= */}
-      <section id="services" className="section-shell max-w-6xl mx-auto px-6 py-20">
+      <section id="services" className="section-shell py-20">
         <h2 className="text-base md:text-lg font-semibold tracking-[0.25em] text-amber-700 uppercase">
           Services
         </h2>
+
         <p className="mt-3 text-3xl font-semibold tracking-tight">
-          Architectural model making & construction services.
+          Architectural model making and selected construction services.
         </p>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {/* MODEL MAKING */}
           <div className="rounded-3xl bg-white p-6 shadow-md">
             <h3 className="text-lg font-semibold">Architectural model making</h3>
             <p className="mt-3 text-sm">
-              High-quality physical models for competitions, presentations and marketing.
+              We produce precise physical models that support design development,
+              competitions and client presentations.
             </p>
             <ul className="mt-4 space-y-2 text-sm">
               <li>• Study and concept models</li>
@@ -87,11 +80,11 @@ export default function Home() {
             </ul>
           </div>
 
-          {/* CONSTRUCTION SERVICES */}
           <div className="rounded-3xl bg-white p-6 shadow-md">
-            <h3 className="text-lg font-semibold">Construction Services</h3>
+            <h3 className="text-lg font-semibold">Construction services</h3>
             <p className="mt-3 text-sm">
-              Renovation, waterproofing and precision construction services.
+              Selected construction and renovation services, focused on precision,
+              durability and clean execution.
             </p>
             <ul className="mt-4 space-y-2 text-sm">
               <li>• Waterproofing works (étanchéité)</li>
@@ -102,43 +95,38 @@ export default function Home() {
           </div>
         </div>
       </section>
-    {/* ================= MODEL TYPES ================= */}
-<section id="models" className="section-shell max-w-6xl mx-auto px-6 py-20">
-  <h2 className="text-base md:text-lg font-semibold tracking-[0.25em] text-amber-700 uppercase">
-    Model Types
-  </h2>
 
-  <p className="mt-3 text-3xl font-semibold tracking-tight">
-    Models tailored to project type and level of detail.
-  </p>
+      {/* ================= MODEL TYPES ================= */}
+      <section id="models" className="section-shell py-20">
+        <h2 className="text-base md:text-lg font-semibold tracking-[0.25em] text-amber-700 uppercase">
+          Model types
+        </h2>
 
-  <p className="mt-4 text-sm text-slate-700 max-w-3xl">
-    From conceptual models to highly detailed presentations, we combine 
-    digital modeling, 3D printing, CNC milling and handcrafted techniques.
-  </p>
+        <p className="mt-3 text-3xl font-semibold tracking-tight">
+          Models tailored to project type and level of detail.
+        </p>
 
-  {/* UNIFIED CARD */}
-  <div className="mt-10 rounded-3xl bg-white p-8 shadow-md">
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-800">
+        <p className="mt-4 text-sm text-slate-700 max-w-3xl">
+          From early concept models to detailed presentation pieces, each model
+          is adapted to the project scale, purpose and level of detail.
+        </p>
 
-      <p>• Master planning models</p>
-      <p>• Mixed-use models</p>
+        <div className="mt-10 rounded-3xl bg-white p-8 shadow-md">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-800">
+            <p>• Master planning models</p>
+            <p>• Mixed-use models</p>
+            <p>• Villa models</p>
+            <p>• Interior models</p>
+            <p>• Conceptual white models</p>
+            <p>• 3D printed architectural models</p>
+            <p>• Landscape models</p>
+            <p>• Handcrafted architectural models</p>
+          </div>
+        </div>
+      </section>
 
-      <p>• Villa models</p>
-      <p>• Interior models</p>
-
-      <p>• Conceptual white models</p>
-      <p>• 3D printed architectural models</p>
-
-      <p>• Landscape models</p>
-      <p>• Handcrafted architectural models</p>
-
-    </div>
-  </div>
-</section>
       {/* ================= PROJECTS ================= */}
-      <section id="projects" className="section-shell max-w-6xl mx-auto px-6 py-20">
-
+      <section id="projects" className="section-shell py-20">
         <h2 className="text-base md:text-lg font-semibold tracking-[0.25em] text-amber-700 uppercase">
           Selected projects
         </h2>
@@ -148,88 +136,57 @@ export default function Home() {
         </p>
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
-
-          {/* HAMM */}
-          <Link
-            href="/projects/hamm"
-            className="group block overflow-hidden rounded-3xl bg-white shadow-md"
-          >
-            <div className="relative h-56 w-full">
-              <Image
-                src="/projects/Hamm/hamm-1.png"
-                alt="Hamm model"
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-[1.05]"
-              />
-            </div>
-            <div className="p-5">
-              <h3 className="text-lg font-semibold">Residential model — Hamm</h3>
-              <p className="mt-2 text-sm text-slate-700">
-                Scale model for a residential development.
-              </p>
-              <p className="mt-4 text-sm font-semibold text-amber-700">
-                View project →
-              </p>
-            </div>
-          </Link>
-
-          {/* TONDELA */}
-          <Link
-            href="/projects/tondela"
-            className="group block overflow-hidden rounded-3xl bg-white shadow-md"
-          >
-            <div className="relative h-56 w-full">
-              <Image
-                src="/projects/tondela/Tondela-1.png"
-                alt="Tondela model"
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-[1.05]"
-              />
-            </div>
-            <div className="p-5">
-              <h3 className="text-lg font-semibold">Architectural model — Tondela</h3>
-              <p className="mt-2 text-sm text-slate-700">
-                Conceptual model combining clean volumes and site.
-              </p>
-              <p className="mt-4 text-sm font-semibold text-amber-700">
-                View project →
-              </p>
-            </div>
-          </Link>
-
-          {/* 🔥 NEW — WATERPROOFING PROJECT */}
-          <Link
-            href="/projects/waterproofing"
-            className="group block overflow-hidden rounded-3xl bg-white shadow-md"
-          >
-            <div className="relative h-56 w-full">
-              <Image
-                src="/projects/waterproofing/waterproofing-1.jpg"
-                alt="Waterproofing renovation project"
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-[1.05]"
-              />
-            </div>
-            <div className="p-5">
-              <h3 className="text-lg font-semibold">Renovation & Waterproofing Works</h3>
-              <p className="mt-2 text-sm text-slate-700">
-                Professional waterproofing, flooring and renovation services.
-              </p>
-              <p className="mt-4 text-sm font-semibold text-amber-700">
-                View project →
-              </p>
-            </div>
-          </Link>
-
+          {[
+            {
+              href: "/projects/hamm",
+              img: "/projects/Hamm/hamm-1.png",
+              title: "Residential model — Hamm",
+              text: "Scale model for a residential development.",
+            },
+            {
+              href: "/projects/tondela",
+              img: "/projects/tondela/Tondela-1.png",
+              title: "Architectural model — Tondela",
+              text: "Conceptual model combining clean volumes and site.",
+            },
+            {
+              href: "/projects/waterproofing",
+              img: "/projects/waterproofing/waterproofing-1.jpg",
+              title: "Renovation & waterproofing works",
+              text: "Professional waterproofing, flooring and renovation services.",
+            },
+          ].map((project) => (
+            <Link
+              key={project.href}
+              href={project.href}
+              className="group block overflow-hidden rounded-3xl bg-white shadow-md"
+            >
+              <div className="relative h-56 w-full">
+                <Image
+                  src={project.img}
+                  alt={project.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+                />
+              </div>
+              <div className="p-5">
+                <h3 className="text-lg font-semibold">{project.title}</h3>
+                <p className="mt-2 text-sm text-slate-700">{project.text}</p>
+                <p className="mt-4 text-sm font-semibold text-amber-700">
+                  View project →
+                </p>
+              </div>
+            </Link>
+          ))}
         </div>
-
       </section>
 
       {/* ================= PROCESS ================= */}
-      <section id="process" className="section-shell max-w-6xl mx-auto px-6 py-20">
+      <section id="process" className="section-shell py-20">
         <h2 className="text-base md:text-lg font-semibold tracking-[0.25em] text-amber-700 uppercase">
           Process
         </h2>
+
         <p className="mt-3 text-3xl font-semibold tracking-tight">
           A clear workflow from first files to final delivery.
         </p>
@@ -237,16 +194,16 @@ export default function Home() {
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {[
             {
-              step: "1 · Brief & files",
-              text: "We receive plans, sections, 3D models and references.",
+              step: "1 · Brief",
+              text: "We discuss the project goals, scale, level of detail and intended use of the model.",
             },
             {
-              step: "2 · Proposal & production",
-              text: "We prepare a proposal with scale, materials and timing.",
+              step: "2 · Proposal",
+              text: "You receive a clear proposal including scope, timeline and cost.",
             },
             {
-              step: "3 · Delivery",
-              text: "Models delivered with professional packaging and installation.",
+              step: "3 · Production & delivery",
+              text: "The model is carefully produced, packed and delivered ready for presentation.",
             },
           ].map((item) => (
             <div key={item.step} className="rounded-3xl bg-white p-5 shadow-md">
@@ -260,19 +217,21 @@ export default function Home() {
       </section>
 
       {/* ================= ABOUT ================= */}
-      <section id="about" className="section-shell max-w-6xl mx-auto px-6 py-20">
+      <section id="about" className="section-shell py-20">
         <div className="grid gap-10 md:grid-cols-2 items-center">
           <div>
             <h2 className="text-base md:text-lg font-semibold tracking-[0.25em] text-amber-700 uppercase">
-              Founder & Model Maker
+              About
             </h2>
 
             <p className="mt-4 text-sm text-slate-700">
-              ROSARQ is led by a model maker passionate about turning drawings into physical objects.
+              ROSARQ is a Luxembourg-based studio focused on architectural model making
+              and selected construction services.
             </p>
 
             <p className="mt-3 text-sm text-slate-700">
-              Early work began with cardboard houses and wooden miniatures — today transformed into architectural precision.
+              We work closely with architects, designers and developers to transform
+              drawings and concepts into precise physical models.
             </p>
           </div>
 
@@ -288,7 +247,7 @@ export default function Home() {
       </section>
 
       {/* ================= CONTACT ================= */}
-      <section id="contact" className="section-shell max-w-6xl mx-auto px-6 py-20">
+      <section id="contact" className="section-shell py-20">
         <div className="grid gap-12 lg:grid-cols-[1.2fr,0.8fr] items-start">
           <div>
             <h2 className="text-base md:text-lg font-semibold tracking-[0.25em] text-amber-700 uppercase">
@@ -300,37 +259,57 @@ export default function Home() {
             </p>
 
             <p className="mt-4 text-sm text-slate-700">
-              Send drawings (PDF/CAD), 3D models or sketches. We'll suggest the best scale and level of detail.
+              Send drawings (PDF/CAD), 3D models or sketches.
+              We will advise on scale, materials and level of detail.
             </p>
           </div>
 
-          <div className="rounded-3xl bg-white p-6 shadow-md">
-            <p className="text-sm font-semibold text-slate-900">Direct contact</p>
-
-            <div className="mt-3 space-y-2 text-sm text-slate-700">
+          <div className="rounded-3xl bg-white p-6 shadow-md space-y-6">
+            <div className="text-sm text-slate-700 space-y-1">
+              <p className="font-semibold text-slate-900">ROSARQ</p>
+              <p>Address: [15, Rue de l`Industrie], [8069] [Bertrange], Luxembourg</p>
+              <p>Business permit nº: [NÚMERO DE PERMISSÃO]</p>
               <p>
                 Email:{" "}
-                <a href="mailto:contact@rosarq.lu" className="font-medium text-amber-700">
+                <a
+                  href="mailto:contact@rosarq.lu"
+                  className="font-medium text-amber-700"
+                >
                   contact@rosarq.lu
                 </a>
               </p>
-              <p>Based in Luxembourg</p>
             </div>
 
-            <p className="mt-4 text-xs text-slate-500">
-              A full contact form may be added later.
-            </p>
+            <div className="h-px bg-black/10" />
+
+            <form
+              action="https://formspree.io/f/SEU_FORM_ID_AQUI"
+              method="POST"
+              encType="multipart/form-data"
+              className="space-y-4"
+            >
+              <input type="text" name="name" placeholder="Name" required className="w-full rounded-xl border px-3 py-2 text-sm" />
+              <input type="email" name="email" placeholder="Email" required className="w-full rounded-xl border px-3 py-2 text-sm" />
+              <textarea name="message" rows={4} placeholder="Message" className="w-full rounded-xl border px-3 py-2 text-sm" />
+              <input type="file" name="attachment" multiple className="text-sm" />
+
+              <button
+                type="submit"
+                className="rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-slate-900 hover:bg-amber-400 transition"
+              >
+                Send message
+              </button>
+            </form>
           </div>
         </div>
       </section>
 
       {/* ================= FOOTER ================= */}
       <footer className="border-t border-black/10 bg-[#f9f4ef] py-6 mt-10">
-        <div className="section-shell max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-600">
+        <div className="section-shell flex flex-col sm:flex-row items-center justify-between text-xs text-slate-600">
           <p>
             © {currentYear} <span className="font-semibold">ROSARQ</span> — All rights reserved.
           </p>
-          <p>Website built with Next.js & Vercel</p>
         </div>
       </footer>
 

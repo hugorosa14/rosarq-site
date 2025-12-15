@@ -39,37 +39,64 @@ export default function Header() {
 
         {/* MOBILE MENU BUTTON */}
         <button
-          className="md:hidden flex flex-col gap-[6px] z-50"
+          className="md:hidden flex flex-col gap-[6px] z-[110]"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
-          <span className={`h-[3px] w-6 bg-slate-900 rounded transition-all ${isOpen ? "rotate-45 translate-y-[7px]" : ""}`} />
-          <span className={`h-[3px] w-6 bg-slate-900 rounded transition-all ${isOpen ? "opacity-0" : ""}`} />
-          <span className={`h-[3px] w-6 bg-slate-900 rounded transition-all ${isOpen ? "-rotate-45 -translate-y-[7px]" : ""}`} />
+          <span className={`h-[2px] w-6 bg-slate-900 rounded transition-all duration-300 ${isOpen ? "rotate-45 translate-y-[6px]" : ""}`} />
+          <span className={`h-[2px] w-6 bg-slate-900 rounded transition-all duration-300 ${isOpen ? "opacity-0" : ""}`} />
+          <span className={`h-[2px] w-6 bg-slate-900 rounded transition-all duration-300 ${isOpen ? "-rotate-45 -translate-y-[6px]" : ""}`} />
         </button>
       </div>
 
-      {/* BACKDROP */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black/40 z-[90] md:hidden"
-          onClick={closeMenu}
-        />
-      )}
-
-      {/* MOBILE SLIDE PANEL */}
+      {/* MOBILE MENU FULLSCREEN */}
       <div
-        className={`fixed top-0 right-0 h-full w-3/4 bg-[#f9f4ef] backdrop-blur-md shadow-xl z-[100]
-        transform ${isOpen ? "translate-x-0" : "translate-x-full"} 
-        transition-transform duration-300 md:hidden`}
+        className={`fixed inset-0 bg-[#f9f4ef] z-[100] transform transition-transform duration-300
+        ${isOpen ? "translate-x-0" : "translate-x-full"} md:hidden`}
       >
-        <nav className="flex flex-col gap-6 text-lg font-medium text-slate-900 mt-24 px-8">
-          <a href="#services" onClick={closeMenu}>Services</a>
-          <a href="#models" onClick={closeMenu}>Model types</a>
-          <a href="#projects" onClick={closeMenu}>Projects</a>
-          <a href="#process" onClick={closeMenu}>Process</a>
-          <a href="#about" onClick={closeMenu}>About</a>
-          <a href="#contact" onClick={closeMenu}>Contact</a>
+        <nav className="h-full flex flex-col items-center justify-center gap-8 text-slate-900">
+          <a
+            href="#services"
+            onClick={closeMenu}
+            className="text-lg font-medium tracking-[0.15em] uppercase"
+          >
+            Services
+          </a>
+          <a
+            href="#models"
+            onClick={closeMenu}
+            className="text-lg font-medium tracking-[0.15em] uppercase"
+          >
+            Model types
+          </a>
+          <a
+            href="#projects"
+            onClick={closeMenu}
+            className="text-lg font-medium tracking-[0.15em] uppercase"
+          >
+            Projects
+          </a>
+          <a
+            href="#process"
+            onClick={closeMenu}
+            className="text-lg font-medium tracking-[0.15em] uppercase"
+          >
+            Process
+          </a>
+          <a
+            href="#about"
+            onClick={closeMenu}
+            className="text-lg font-medium tracking-[0.15em] uppercase"
+          >
+            About
+          </a>
+          <a
+            href="#contact"
+            onClick={closeMenu}
+            className="text-lg font-medium tracking-[0.15em] uppercase"
+          >
+            Contact
+          </a>
         </nav>
       </div>
     </header>

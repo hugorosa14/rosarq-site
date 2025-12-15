@@ -15,10 +15,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="bg-[var(--background)] text-slate-900">
-        <Header /> {/* HEADER NO TOPO */}
-        <main className="pt-4">{children}</main>
+    <html lang="en" className="font-sans">
+      <body className="min-h-screen bg-[var(--background)] text-slate-900 overflow-x-hidden">
+        <Header />
+
+        <main className="pt-4">
+          {children}
+        </main>
       </body>
     </html>
   );
