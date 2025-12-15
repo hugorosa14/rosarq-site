@@ -283,7 +283,7 @@ export default function Home() {
             <div className="h-px bg-black/10" />
 
             <form
-              action="https://formspree.io/f/SEU_FORM_ID_AQUI"
+              action="https://formspree.io/f/xwpgjloz"
               method="POST"
               encType="multipart/form-data"
               className="space-y-4"
