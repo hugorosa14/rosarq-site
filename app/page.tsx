@@ -267,8 +267,8 @@ export default function Home() {
           <div className="rounded-3xl bg-white p-6 shadow-md space-y-6">
             <div className="text-sm text-slate-700 space-y-1">
               <p className="font-semibold text-slate-900">ROSARQ</p>
-              <p>Address: [15, Rue de l`Industrie], [8069] [Bertrange], Luxembourg</p>
-              <p>Business permit nº: [NÚMERO DE PERMISSÃO]</p>
+              <p>Address: 15, Rue de l`Industrie, 8069 Bertrange, Luxembourg</p>
+              <p>Business permit nº: [PERMIT NUMBER]</p>
               <p>
                 Email:{" "}
                 <a
