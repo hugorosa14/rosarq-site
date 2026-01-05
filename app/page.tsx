@@ -25,7 +25,7 @@ export default function Home() {
           <div className="relative flex h-full items-center px-6 sm:px-10 max-w-5xl">
             <div>
               <p className="text-xs font-semibold tracking-[0.35em] text-amber-300 uppercase mb-4">
-                Architectural model making & services
+                Architectural model making & services Luxembourg
               </p>
 
               <h1 className="text-3xl sm:text-4xl lg:text-[42px] leading-tight font-semibold text-white">
