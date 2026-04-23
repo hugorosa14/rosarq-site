@@ -2,17 +2,14 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.classList.add("menu-open");
-    } else {
-      document.body.classList.remove("menu-open");
-    }
-
+    if (isOpen) document.body.classList.add("menu-open");
+    else document.body.classList.remove("menu-open");
     return () => document.body.classList.remove("menu-open");
   }, [isOpen]);
 
@@ -20,34 +17,30 @@ export default function Header() {
 
   return (
     <>
-      {/* HEADER BAR */}
       <header className="sticky top-0 z-40 w-full bg-[#f9f4ef]/95 backdrop-blur border-b border-black/10">
         <div className="mx-auto max-w-7xl px-4 h-20 flex items-center justify-between">
-          {/* LOGO */}
-          <div className="flex items-center gap-4">
+          <Link href="/" className="flex items-center gap-4">
             <Image
-              src="/logo-rosarq.png"
+              src="/logo-rosartifex.png"
               width={56}
               height={56}
-              alt="ROSARQ"
-              className="rounded-full shadow-sm"
+              alt="ROSARTIFEX"
+              className="rounded-full shadow-soft"
             />
             <span className="text-lg font-semibold tracking-[0.25em] uppercase text-slate-900">
-              ROSARQ
+              ROSARTIFEX
             </span>
-          </div>
+          </Link>
 
-          {/* DESKTOP MENU */}
           <nav className="hidden md:flex items-center gap-8 text-[15px] font-medium text-slate-800">
-            <a href="#services">Services</a>
-            <a href="#models">Model types</a>
-            <a href="#projects">Projects</a>
-            <a href="#process">Process</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+            <Link href="/">Accueil</Link>
+            <Link href="/#services">Services</Link>
+            <Link href="/#projects">Réalisations</Link>
+            <Link href="/#process">Processus</Link>
+            <Link href="/#about">À propos</Link>
+            <Link href="/#contact">Contact</Link>
           </nav>
 
-          {/* MOBILE BUTTON */}
           <button
             onClick={() => setIsOpen(true)}
             className="md:hidden z-50"
@@ -60,10 +53,8 @@ export default function Header() {
         </div>
       </header>
 
-      {/* FULLSCREEN MOBILE MENU */}
       {isOpen && (
         <div className="fixed inset-0 z-[100] bg-[#f9f4ef] flex flex-col items-center justify-center">
-          {/* CLOSE BUTTON */}
           <button
             onClick={closeMenu}
             className="absolute top-6 right-6 text-3xl text-slate-900"
@@ -72,24 +63,23 @@ export default function Header() {
             ×
           </button>
 
-          {/* MENU LINKS */}
           <nav className="flex flex-col gap-8 text-center">
             {[
-              { label: "Services", href: "#services" },
-              { label: "Model types", href: "#models" },
-              { label: "Projects", href: "#projects" },
-              { label: "Process", href: "#process" },
-              { label: "About", href: "#about" },
-              { label: "Contact", href: "#contact" },
+              { label: "Accueil", href: "/" },
+              { label: "Services", href: "/#services" },
+              { label: "Réalisations", href: "/#projects" },
+              { label: "Processus", href: "/#process" },
+              { label: "À propos", href: "/#about" },
+              { label: "Contact", href: "/#contact" },
             ].map((item) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 onClick={closeMenu}
                 className="text-xl font-medium tracking-[0.2em] uppercase text-slate-900"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
         </div>
