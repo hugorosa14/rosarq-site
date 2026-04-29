@@ -20,7 +20,7 @@ export default function Home() {
         <div className="relative z-10 h-full flex items-center px-6 max-w-5xl">
           <div>
             <p className="text-xs tracking-[0.3em] uppercase text-amber-400">
-              Isolation • Étanchéité • Pose de sol • Carrelage • Plaquiste
+              Isolation • Étanchéité • Revêtement de sol • Carrelage • Plaquiste
             </p>
 
             <h1 className="mt-4 text-4xl sm:text-5xl font-bold text-white leading-tight">
@@ -112,7 +112,7 @@ export default function Home() {
           {/* BLOC 2 */}
           <div className="grid md:grid-cols-2 gap-10 items-center md:flex-row-reverse">
             <div className="order-2 md:order-1">
-              <h3 className="text-2xl font-semibold">Pose de sol</h3>
+              <h3 className="text-2xl font-semibold">Revêtement de sol</h3>
               <p className="mt-4 text-sm text-slate-700 leading-relaxed">
                 Installation professionnelle de parquet, stratifié, vinyle, LVT et
                 autres revêtements. Finitions propres, durabilité et précision
@@ -188,7 +188,7 @@ export default function Home() {
             },
             {
               href: "/services/pose-de-sol",
-              title: "Pose de sol",
+              title: "Revêtement de sol",
               text: "Installation précise de revêtements durables.",
             },
             {
@@ -462,7 +462,6 @@ export default function Home() {
             <div className="text-sm text-slate-700 space-y-1">
               <p className="font-semibold text-slate-900">ROSARTIFEX</p>
               <p>Adresse: 15, Rue de l’Industrie, 8069 Bertrange, Luxembourg</p>
-              <p>Business permit nº: [PERMIT NUMBER]</p>
               <p>
                 Email:{" "}
                 <a href="mailto:contact@rosartifex.lu" className="text-amber-700">
