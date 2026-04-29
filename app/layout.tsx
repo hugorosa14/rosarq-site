@@ -5,14 +5,19 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 export const metadata: Metadata = {
-  title: "ROSARTIFEX | Isolation, Étanchéité, Pose de Sol & Plaquiste",
+  title:
+    "ROSARTIFEX — Isolation & Étanchéité, Plaquiste & Revêtements de Sol au Luxembourg",
   description:
-    "ROSARTIFEX réalise des travaux d’isolation, d’étanchéité, de pose de sol, de carrelage et de plâtrerie au Luxembourg.",
+    "Expertise technique en isolation thermique, étanchéité, plaques de plâtre et revêtements de sol. Interventions fiables, finitions précises et conformité aux standards luxembourgeois.",
+  alternates: {
+    canonical: "https://rosartifex.lu/",
+  },
   openGraph: {
-    title: "ROSARTIFEX | Solutions Techniques au Luxembourg",
+    title:
+      "ROSARTIFEX — Isolation & Étanchéité, Plaquiste & Revêtements de Sol au Luxembourg",
     description:
-      "Isolation, étanchéité, pose de sol, carrelage et plâtrerie avec précision et garantie.",
-    url: "https://www.rosartifex.lu",
+      "Expertise technique en isolation thermique, étanchéité, plaques de plâtre et revêtements de sol au Luxembourg.",
+    url: "https://rosartifex.lu/",
     siteName: "ROSARTIFEX",
     locale: "fr_LU",
     type: "website",
