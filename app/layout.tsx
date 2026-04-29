@@ -1,4 +1,3 @@
-// app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./Header";
@@ -6,18 +5,19 @@ import Footer from "./Footer";
 
 export const metadata: Metadata = {
   title:
-    "ROSARTIFEX — Isolation & Étanchéité, Plaquiste & Revêtements de Sol au Luxembourg",
+    "ROSARTIFEX — Isolation, Étanchéité, Plaquiste & Revêtements de Sol au Luxembourg",
   description:
-    "Expertise technique en isolation thermique, étanchéité, plaques de plâtre et revêtements de sol. Interventions fiables, finitions précises et conformité aux standards luxembourgeois.",
+    "Entreprise spécialisée en isolation thermique, étanchéité, pose de sol, carrelage et plâtrerie au Luxembourg. Interventions professionnelles, finitions impeccables et matériaux certifiés.",
+  metadataBase: new URL("https://rosartifex.lu"),
   alternates: {
-    canonical: "https://rosartifex.lu/",
+    canonical: "/",
   },
   openGraph: {
     title:
-      "ROSARTIFEX — Isolation & Étanchéité, Plaquiste & Revêtements de Sol au Luxembourg",
+      "ROSARTIFEX — Isolation, Étanchéité, Plaquiste & Revêtements de Sol au Luxembourg",
     description:
-      "Expertise technique en isolation thermique, étanchéité, plaques de plâtre et revêtements de sol au Luxembourg.",
-    url: "https://rosartifex.lu/",
+      "Solutions techniques durables pour vos projets : isolation, étanchéité, sols, carrelage et plâtrerie.",
+    url: "https://rosartifex.lu",
     siteName: "ROSARTIFEX",
     locale: "fr_LU",
     type: "website",
@@ -31,7 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" className="font-sans">
-      <body className="min-h-screen bg-[var(--background)] text-slate-900 overflow-x-hidden">
+      <body className="min-h-screen bg-[#f9f4ef] text-slate-900 overflow-x-hidden">
         <Header />
         <main className="pt-4">{children}</main>
         <Footer />

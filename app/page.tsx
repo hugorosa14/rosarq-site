@@ -46,13 +46,13 @@ export default function Home() {
       </section>
 
       {/* POURQUOI NOUS CHOISIR */}
-      <section className="section-shell py-20">
+      <section className="section-shell py-24">
         <p className="subtitle">Pourquoi nous choisir</p>
         <h2 className="mt-3 text-3xl font-semibold tracking-tight">
           Un partenaire fiable pour vos travaux.
         </h2>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-4">
+        <div className="mt-12 grid gap-6 md:grid-cols-4">
           {[
             {
               title: "Qualité certifiée",
@@ -173,13 +173,13 @@ export default function Home() {
         </div>
       </section>
       {/* SERVICES */}
-      <section id="services" className="section-shell py-20">
+      <section id="services" className="section-shell py-24">
         <p className="subtitle">Services</p>
         <h2 className="mt-3 text-3xl font-semibold tracking-tight">
           Expertise technique pour vos travaux.
         </h2>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
           {[
             {
               href: "/services/isolation-etancheite",
@@ -215,13 +215,13 @@ export default function Home() {
       </section>
 
       {/* RÉALISATIONS */}
-      <section id="projects" className="section-shell py-20">
+      <section id="projects" className="section-shell py-24">
         <p className="subtitle">Réalisations</p>
         <h2 className="mt-3 text-3xl font-semibold tracking-tight">
           Quelques projets récents.
         </h2>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
           {[
             {
               img: "/realisations/etancheite.jpg",
@@ -253,13 +253,13 @@ export default function Home() {
       </section>
 
       {/* GARANTIES */}
-      <section className="section-shell py-20">
+      <section className="section-shell py-24">
         <p className="subtitle">Garanties & Certifications</p>
         <h2 className="mt-3 text-3xl font-semibold tracking-tight">
           La tranquillité d’esprit pour vos travaux.
         </h2>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
           {[
             {
               title: "Garantie décennale",
@@ -283,13 +283,13 @@ export default function Home() {
       </section>
 
       {/* PROCESSUS */}
-      <section id="process" className="section-shell py-20">
+      <section id="process" className="section-shell py-24">
         <p className="subtitle">Processus</p>
         <h2 className="mt-3 text-3xl font-semibold tracking-tight">
           Une méthode claire et professionnelle.
         </h2>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
           {[
             {
               step: "Analyse",
@@ -313,14 +313,14 @@ export default function Home() {
           ))}
         </div>
       </section>
-      {/* À PROPOS — NOVA SECÇÃO PREMIUM */}
-      <section id="about" className="section-shell py-20">
+
+      {/* À PROPOS */}
+      <section id="about" className="section-shell py-24">
         <p className="subtitle">À propos</p>
         <h2 className="mt-3 text-3xl font-semibold tracking-tight">
           Une entreprise engagée au Luxembourg.
         </h2>
 
-        {/* INTRO */}
         <p className="mt-4 max-w-3xl text-sm text-slate-700 leading-relaxed">
           ROSARTIFEX est spécialisée dans l’isolation, l’étanchéité, la pose de sol,
           le carrelage et la plâtrerie. Avec plus de 12 ans d’expérience cumulée,
@@ -328,55 +328,55 @@ export default function Home() {
           avec une exigence élevée de qualité, de précision et de durabilité.
         </p>
 
-        {/* VALEURS — VERSION PREMIUM */}
-<div className="mt-20 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-
-  {/* QUALITÉ */}
-  <div className="bg-white p-8 rounded-3xl shadow-soft text-center">
-    <svg xmlns="http://www.w3.org/2000/svg" className="mx-auto h-12 w-12 text-amber-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-    </svg>
-    <h3 className="mt-4 text-xl font-bold tracking-wide">QUALITÉ</h3>
-    <p className="mt-3 text-[15px] text-slate-700 leading-relaxed">
-      Un travail propre, durable et conforme aux normes luxembourgeoises, réalisé avec des matériaux certifiés.
-    </p>
-  </div>
-
-  {/* SAVOIR-FAIRE */}
-  <div className="bg-white p-8 rounded-3xl shadow-soft text-center">
-    <svg xmlns="http://www.w3.org/2000/svg" className="mx-auto h-12 w-12 text-amber-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M3 3v18h18M7 7h.01M7 11h.01M7 15h.01M11 7h6M11 11h6M11 15h6" />
-    </svg>
-    <h3 className="mt-4 text-xl font-bold tracking-wide">SAVOIR‑FAIRE</h3>
-    <p className="mt-3 text-[15px] text-slate-700 leading-relaxed">
-      Une équipe expérimentée et polyvalente, capable de gérer l’ensemble du processus, du diagnostic aux finitions.
-    </p>
-  </div>
-
-  {/* FIABILITÉ */}
-  <div className="bg-white p-8 rounded-3xl shadow-soft text-center">
-    <svg xmlns="http://www.w3.org/2000/svg" className="mx-auto h-12 w-12 text-amber-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-    </svg>
-    <h3 className="mt-4 text-xl font-bold tracking-wide">FIABILITÉ</h3>
-    <p className="mt-3 text-[15px] text-slate-700 leading-relaxed">
-      Respect des délais, communication transparente et engagement total sur chaque chantier.
-    </p>
-  </div>
-
-  {/* RESPECT */}
-  <div className="bg-white p-8 rounded-3xl shadow-soft text-center">
-    <svg xmlns="http://www.w3.org/2000/svg" className="mx-auto h-12 w-12 text-amber-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5 9 6.343 9 8s1.343 3 3 3zm0 2c-2.21 0-4 1.79-4 4v1h8v-1c0-2.21-1.79-4-4-4z" />
-    </svg>
-    <h3 className="mt-4 text-xl font-bold tracking-wide">RESPECT</h3>
-    <p className="mt-3 text-[15px] text-slate-700 leading-relaxed">
-      Un travail soigné, réalisé dans le respect de votre espace, de vos contraintes et de vos attentes.
-    </p>
-  </div>
-
-</div>
-
+        {/* VALEURS */}
+        <div className="mt-20 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+          {[
+            {
+              icon: (
+                <svg xmlns="http://www.w3.org/2000/svg" className="mx-auto h-12 w-12 text-amber-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              ),
+              title: "QUALITÉ",
+              text: "Un travail propre, durable et conforme aux normes luxembourgeoises, réalisé avec des matériaux certifiés.",
+            },
+            {
+              icon: (
+                <svg xmlns="http://www.w3.org/2000/svg" className="mx-auto h-12 w-12 text-amber-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 3v18h18M7 7h.01M7 11h.01M7 15h.01M11 7h6M11 11h6M11 15h6" />
+                </svg>
+              ),
+              title: "SAVOIR‑FAIRE",
+              text: "Une équipe expérimentée et polyvalente, capable de gérer l’ensemble du processus, du diagnostic aux finitions.",
+            },
+            {
+              icon: (
+                <svg xmlns="http://www.w3.org/2000/svg" className="mx-auto h-12 w-12 text-amber-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              ),
+              title: "FIABILITÉ",
+              text: "Respect des délais, communication transparente et engagement total sur chaque chantier.",
+            },
+            {
+              icon: (
+                <svg xmlns="http://www.w3.org/2000/svg" className="mx-auto h-12 w-12 text-amber-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5 9 6.343 9 8s1.343 3 3 3zm0 2c-2.21 0-4 1.79-4 4v1h8v-1c0-2.21-1.79-4-4-4z" />
+                </svg>
+              ),
+              title: "RESPECT",
+              text: "Un travail soigné, réalisé dans le respect de votre espace, de vos contraintes et de vos attentes.",
+            },
+          ].map((item) => (
+            <div key={item.title} className="bg-white p-8 rounded-3xl shadow-soft text-center">
+              {item.icon}
+              <h3 className="mt-4 text-xl font-bold tracking-wide">{item.title}</h3>
+              <p className="mt-3 text-[15px] text-slate-700 leading-relaxed">
+                {item.text}
+              </p>
+            </div>
+          ))}
+        </div>
 
         {/* HISTOIRE */}
         <div className="mt-20 max-w-3xl">
@@ -445,7 +445,7 @@ export default function Home() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="section-shell py-20">
+      <section id="contact" className="section-shell py-24">
         <div className="grid gap-12 lg:grid-cols-[1.2fr,0.8fr] items-start">
           <div>
             <p className="subtitle">Contact</p>
