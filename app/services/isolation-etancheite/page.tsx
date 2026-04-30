@@ -1,10 +1,29 @@
 import Image from "next/image";
 
+export const metadata = {
+  title: "Isolation & Étanchéité — ROSARTIFEX Luxembourg",
+  description:
+    "Travaux d’isolation thermique, acoustique et d’étanchéité au Luxembourg. Solutions durables contre l’humidité, infiltrations et pertes thermiques. Interventions professionnelles et garanties.",
+  alternates: {
+    canonical: "https://rosartifex.lu/services/isolation-etancheite",
+  },
+  openGraph: {
+    title: "Isolation & Étanchéité — ROSARTIFEX Luxembourg",
+    description:
+      "Isolation thermique, étanchéité bitumineuse, membranes et solutions durables pour vos projets au Luxembourg.",
+    url: "https://rosartifex.lu/services/isolation-etancheite",
+    siteName: "ROSARTIFEX",
+    locale: "fr_LU",
+    type: "article",
+  },
+};
+
 export default function IsolationEtancheitePage() {
   return (
     <div className="section-shell py-16">
+
       <div className="grid gap-10 lg:grid-cols-[1.2fr,0.8fr] items-start">
-        
+
         {/* TEXTO */}
         <div>
           <p className="subtitle">Isolation & Étanchéité</p>
@@ -86,6 +105,24 @@ export default function IsolationEtancheitePage() {
         </div>
 
       </div>
+
+      {/* CTA FINAL */}
+      <div className="mt-20 rounded-3xl bg-white p-10 shadow-soft text-center">
+        <h2 className="text-2xl font-semibold tracking-tight">
+          Besoin d’une isolation ou d’une étanchéité durable ?
+        </h2>
+        <p className="mt-3 text-sm text-slate-700 max-w-xl mx-auto">
+          Envoyez vos plans, photos ou description de votre projet. Nous vous
+          répondons rapidement avec une proposition claire et adaptée.
+        </p>
+        <a
+          href="/#contact"
+          className="btn-gold mt-6 inline-block"
+        >
+          Demander un devis
+        </a>
+      </div>
+
     </div>
   );
 }

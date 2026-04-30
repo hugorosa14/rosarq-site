@@ -22,6 +22,11 @@ export const metadata: Metadata = {
     locale: "fr_LU",
     type: "website",
   },
+
+  // ✅ AQUI ESTÁ A ALTERAÇÃO DO FAVICON
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
